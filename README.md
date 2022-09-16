@@ -1,17 +1,44 @@
-# leauges
 
-Leauges Flutter project.
+# Leauges Using Flutter
 
-## Getting Started
+It's an music album application in which user will get albums list on home screen. User can also search for any ablum. There is music list for the particulr ablum on detail screen.
 
-This project is a starting point for a Leauges application.
 
-In this project Bloc Pattern is used, Retrofit is used for calling api.
+## API Reference
 
-listing of album is visible and you can fillter album list with search api.
+#### Get album list
 
-you can visible music detsil also with thumbnail but due to ImageCodec Exception issue not able to visible image.
+```http
+  GET https://jsonplaceholder.typicode.com/albums
+```
 
-This project will run on Macos,Iphone,Android,Web.
+#### Get album's music list
 
+```http
+  GET https://jsonplaceholder.typicode.com/albums/{id}/photos
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch music list |
+
+#### Get search ablums
+
+```http
+  GET https://jsonplaceholder.typicode.com/albums?title=
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `title=`      | `string` | **Required**. title of album to search |
+
+## Tech Stack
+
+**Platform:** VS Code
+
+**Framework:** Flutter 3
+
+**Programming Language:** Dart
+
+**Architecture:** BLoC
 
